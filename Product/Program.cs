@@ -13,6 +13,9 @@ namespace Product
             Category office = new Category("Office supplies");
             Category home = new Category("Home essentials");
             Category computerParts = new Category("Computer parts");
+            
+            // Category test = new Category("");
+            // Category test2 = new Category("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");            
 
             List<Product> list = new List<Product>();
             list.Add(new Product("Toothbrush", 100, home));
@@ -65,15 +68,29 @@ namespace Product
     }
     class Category
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value) && value.Length <= 32)
+                {
+                    name = value;
+                }
+                else
+                {
+                    throw new Exception($"Invalid value ({value}) for category name. It cannot be null or empty or longer than 32 characters.");
+                }
+            }
+        }
         public override string ToString()
         {
             return $"Category: {Name}";
         }
         public Category(string name)
         {
-            Name = name;
+            this.name = name;
         }
     }
 }
