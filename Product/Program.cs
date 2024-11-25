@@ -37,7 +37,6 @@ namespace Product
     {
         int price;
         string name;
-        // The discount is in percentage 
         int discount;
         public Product(string name, int price, Category category, int discount=0)
         {
@@ -51,7 +50,7 @@ namespace Product
         {
             get
             {
-                return price * (100 - discount) / 100;
+                return (int)(price * (100 - discount) / 100); // todo maybe fix this
             }
             set
             {
