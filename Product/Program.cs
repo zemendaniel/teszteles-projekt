@@ -21,7 +21,7 @@ namespace Product
             list.Add(new Product("Toothbrush", 100, home));
             list.Add(new Product("Hairdryer", 500, home));
             list.Add(new Product("Pen", 5, office, 10));
-            list.Add(new Product("Motherboard", 50000, computerParts, 50));
+            list.Add(new Product("Motherboard", 50000, computerParts, 33));
             foreach (Product p in list)
             {
                 Console.WriteLine(p);
@@ -50,7 +50,7 @@ namespace Product
         {
             get
             {
-                return (int)(price * (100 - discount) / 100); // todo maybe fix this
+                return (int)(price * (100 - discount) / 100); 
             }
             set
             {
