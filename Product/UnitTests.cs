@@ -29,5 +29,29 @@ namespace Product.Test
             Product p = new Product("test", 100, new Category("test"));
             Assert.Throws<Exception>(() => p.Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         }
+        [Fact]
+        public void TestMethod5()
+        {
+            Product p = new Product("test", 100, new Category("test"));
+            Assert.Throws<Exception>(() => p.Price = -100);
+        }
+        [Fact]
+        public void TestMethod6()
+        {
+            Product p = new Product("test", 100, new Category("test"));
+            Assert.Throws<Exception>(() => p.Discount = -1);
+        }
+        [Fact]
+        public void TestMethod7()
+        {
+            Product p = new Product("test", 100, new Category("test"));
+            Assert.Throws<Exception>(() => p.Name = "");
+        }
+        [Fact]
+        public void TestMethod8()
+        {
+            Category c = new Category("test");
+            Assert.Throws<Exception>(() => c.Name = "");
+        }
     }
 }
