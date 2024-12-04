@@ -1,0 +1,56 @@
+========================================= 
+    (                                     
+    )\ )            (                  )  
+   (()/( (          )\ )   (        ( /(  
+    /(_)))(    (   (()/(  ))\   (   )\()) 
+   (_)) (()\   )\   ((_))/((_)  )\ (_))/  
+   | _ \ ((_) ((_)  _| |(_))(  ((_)| |_   
+   |  _/| '_|/ _ \/ _` || || |/ _| |  _|  
+   |_|  |_|  \___/\__,_| \_,_|\__|  \__|  
+ ========================================= 
+  In memory adatbázis struktúra online
+	webáruházak termékeihez.
+ =========================================
+
+  Tárolt adatok:     -  ár 	   int
+	             -  név	   string
+		     -  akció      int
+		     -  kategória  Category
+			- Név	   string
+
+  Product:	- kunstruktor(string name,
+		      int price,
+		      category? category,
+		      int discount = 0)
+	- .Price       int 	get;set
+	- .Discount    int	get;set
+	- .Name        string 	get;set
+	- .Category    Category get;set
+	- .ToString()  string
+	
+
+  Category:	- kunstruktor(string name)
+	
+	- .Name string 		get;set
+	- .Tostring() string
+
+ -----------------Működés-----------------
+
+ A Product Price getter beleszámolja a 
+   discount-ot, a setter tesztteli, hogy 
+   az ár nagyobb-e nullánál.
+  A discount settere teszteli hogy 0-100
+   között van-e az  érték.
+  A Name settere min 1 max 32 hosszú
+   karakterláncot fogad el.
+  
+ A Category Name settere min 1 max 32 hosszú
+   karakterláncot fogad el.
+
+ --------------- Tesztelés ---------------
+ 
+  100% utasítás lefedettség.
+  Mind a kimenetek helyes mivoltát, és a 
+   hibás bemenetekre dobott hibák 
+   tesztelése az xunit tesztrendszer
+   használatával történt.
