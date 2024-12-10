@@ -36,6 +36,10 @@
 
  -----------------Működés-----------------
 
+ A program lényege a következő:
+ Létrehozunk kategória (Category) és termék (Product) osztályokat. Egy terméknek van: neve,
+ára, leárazása és kategóriája. Egy kategória több termékhez is tartozhat, de 1 termékhez csak 1 kategória tartozik (sok az egyhez kapcsolat). 
+
  A Product Price getter beleszámolja a 
    discount-ot, a setter tesztteli, hogy 
    az ár nagyobb-e nullánál.
