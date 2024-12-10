@@ -36,9 +36,9 @@
 
  -----------------Működés-----------------
 
- A program lényege a következő:
+ A konzol alkalmazásunk lényege a következő:
  Létrehozunk kategória (Category) és termék (Product) osztályokat. Egy terméknek van: neve,
-ára, leárazása és kategóriája. Egy kategória több termékhez is tartozhat, de 1 termékhez csak 1 kategória tartozik (sok az egyhez kapcsolat). 
+ára, leárazása és kategóriája. Egy kategória több termékhez is tartozhat, de 1 termékhez csak 1 kategória tartozik (sok az egyhez kapcsolat). Ezután kiiratunk minden terméket és kategóriát.
 
  A Product Price getter beleszámolja a 
    discount-ot, a setter tesztteli, hogy 
@@ -53,8 +53,8 @@
 
  --------------- Tesztelés ---------------
  
-  100% utasítás lefedettség.
+  100% utasítási és döntési lefedettségre törekedtünk.
   Mind a kimenetek helyes mivoltát, és a 
    hibás bemenetekre dobott hibák 
-   tesztelése az xunit tesztrendszer
-   használatával történt.
+   tesztelése az Xunit tesztrendszer
+   használatával történt. Egy informális felülvizsgálattal is leelenőriztük a kódot (statikus tesztelés). Igyekeztünk az olvasható és karbantartható kód (karbantarthatósági teszt) írása törekedni.
